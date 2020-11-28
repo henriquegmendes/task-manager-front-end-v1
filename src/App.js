@@ -19,6 +19,10 @@ class App extends Component {
       isUserAuthenticated: false,
     }
 
+    this.verifyAuthenticatedUser();
+  }
+
+  verifyAuthenticatedUser = () => {
     const token = localStorageUtils.get();
 
     if (token) {
